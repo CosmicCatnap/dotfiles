@@ -1,0 +1,23 @@
+
+set cpt=l 
+set visualbell
+set noerrorbells
+set hintchars=abcdefghijklmnopqrstuvwxyz
+map <Right> gt
+map <Left> gT
+map <C-s> /
+
+colorscheme molokai
+
+hi CmdLine>* -append font-family: Terminus; font-size: 9pt;
+hi CompDesc -append font-family: Terminus; font-size: 9pt;
+hi CompTitle -append font-family: Terminus; font-size: 9pt;
+hi CompItem>* -append font-family: Terminus; font-size: 9pt;
+hi StatusLine -append font-family: Terminus; font-size: 9pt;
+hi InfoMsg -append font-family: Terminus; font-size: 9pt;
+hi ModeMsg -append font-family: Terminus; font-size: 9pt;
+hi WarningMsg -append font-family: Terminu font-size: 9pt;s;
+hi MoreMsg -append font-family: Terminus; font-size: 9pt;
+hi Title -append font-family: Terminus; font-size: 9pt;
+
+highlight Hint font-family: Terminus; font-size: 9px; font-weight: bold; text-transform: uppercase; color: white; background-color: blue; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px; 
