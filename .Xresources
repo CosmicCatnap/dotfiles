@@ -1,0 +1,20 @@
+! URXVT settings ------------------------------------------------------------
+URxvt.font:xft:proggy:size=10
+URxvt.boldFont:xft:proggy:size=10
+URxvt.scrollBar: false
+URxvt*urlLauncher: firefox
+URxvt.cursorBlink:  true
+URxvt.cursorColor:  #b1eae1
+URxvt.shading:      30
+URxvt.tintcolor:    #699c93
+URxvt.blurradius:   5
+URxvt.depth:        32
+URxvt*background: rgba:0000/0000/0200/c800
+URxvt*saveLines: 65535
+URxvt*termName: rxvt
+URxvt.iso14755: False
+
+! Terminal colors
+! basic scheme
+*background:#000000
+*foreground: #c2fffa
