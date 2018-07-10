@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="Realtek_ALC1150" mtime="1530807269" type="bool" value="true"/>
+	<entry name="Intel_Haswell_HDMI" mtime="1530807269" type="bool" value="true"/>
+</gconf>
