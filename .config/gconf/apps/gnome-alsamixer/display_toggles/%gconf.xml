@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="Realtek_ALC1150-Loopback_Mixing" mtime="1530807276" type="bool" value="true"/>
-	<entry name="Realtek_ALC1150-Input_Source" mtime="1530807276" type="bool" value="true"/>
-	<entry name="Realtek_ALC1150-Auto-Mute_Mode" mtime="1530807275" type="bool" value="true"/>
-</gconf>
