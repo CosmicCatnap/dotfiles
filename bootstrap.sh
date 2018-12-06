@@ -3,39 +3,31 @@
 # please run this package with suo privlages if you want it to install prerequesits
 
 # The packages that must be installed before we can transplant dot files
-packages='zsh xscreensaver vim python nano irssi rxvt-unicode terminator'
-
-declare -A hasPath;
-hasPath[/etc/redhat-release]=yum
-hasPath[/etc/arch-release]=pacman
-hasPath[/etc/gentoo-release]=emerge
-hasPath[/etc/SuSE-release]=zypp
-hasPath[/etc/debian_version]=apt-get
-hasPath[/etc/linuxmint]=apt-get
-hasPath[/etc/ubuntu-release]=apt-get
-
-for f in ${!hasPath[@]}
-do
-    if [[ -f $f ]];then
-      echo -n "Welcome to the dotfile bootstrap, your package manager path is $hasPath"
-      echo "would you like to install the following?"
-      for p in $packages
-      do
-        echo $p
-      done
-      read -p "Are you sure? " -n 1 -r
-      echo    # (optional) move to a new line
+packages='zsh vim python nano weechat rxvt-unicode terminator tmux feh ttf-dejavu curl'
+      printf  "=================================================\n"
+      echo -n "Welcome to my Arch Linux dotfile bootstrap script"
+      printf  "\n=================================================\n\n"
+      echo -e "The following packages are required: \033[31m$packages\033[0m"
+      #for p in $packages
+      #do
+      #done
+      read -p "\nWould you like to install these packages now? " -n 1 -r
       if [[ $REPLY =~ ^[Yy]$ ]]
         then
-        exec ${osInfo[$f]} "install" $packages
+        printf "\n"
+        sudo pacman -S $packages
+        printf "\n"
         fi
-      read -p "Would you like to move the dotfiles in ${PWD} to $HOME?" -n 1 -r
-      echo "(y/n) "
+      read -p "\nIt's recommended to install oh-my-zsh, install now?\n" -n 1 -r
+      if [[ $REPLY =~ ^[Yy]$ ]]
+        then
+        printf "\n"
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+      printf "\nWould you like to move dotfiles from \033[31m${PWD}\033[0m to \033[31m$HOME\033[0m?\n"
+      read -p  "(y/n) " -n 1 -r
 	if [[ $REPLY =~ ^[Yy]$ ]]
 	then
-	echo "Moving dotfiles from ${PWD} to $HOME"
+	printf "\nMoving dotfiles from \033[31m${PWD}\033[0m to \033[31m$HOME\033[0m\n"
 	cp -R ${PWD}/.*  ~/
-else
-	echo "It does not appear that your /etc/issue could be found four this distribution"
-	echo "Exiting..."
-fi
+	fi
+        echo "Dotfile install complete!"
