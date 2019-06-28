@@ -1,8 +1,3 @@
-URxvt*font:           xft:DejaVu Sans Mono:style=Book:size=12
-URxvt*boldFont:       xft:DejaVu Sans Mono:style=Bold:size=12
-URxvt*italicFont:     xft:DejaVu Sans Mono:style=Oblique:size=12
-URxvt*boldItalicFont: xft:DejaVu Sans Mono:style=BoldOblique:size=12
-
 Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 Xft.dpi:        96
@@ -11,20 +6,33 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle: hintsmedium
 
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
-URxvt.url-select.launcher:  chromium
+!FONTS
+URxvt*font:           xft:DejaVuSansMono:style=book:size=12
+URxvt*boldFont:       xft:DejaVuSansMono:style=Bold:size=12
+URxvt*italicFont:     xft:DejaVuSansMono:style=Oblique:size=12
+URxvt*boldItalicFont: xft:DejaVuSansMono:style=BoldOblique:size=12
+
+!URXVT OPTIONS
+URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
+URxvt.url-launcher:         firefox
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.scrollBar:            false
+URxvt*termName:             xterm-unicode-256color
+URxvt*saveLines:            12000
+!URxvt*fading:               30
+
+
+!SHORTCUTS
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search!
 
-URxvt.scrollBar: false
-URxvt.url-launcher: firefox
+!TRANSPARENCY
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
 
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
-
-!
+!COLORS
 *.foreground:  #c4c5b5
 *.background:  #1a1a1a
 *.cursorColor: #f6f7ec
