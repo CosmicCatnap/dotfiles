@@ -1,5 +1,5 @@
 #!/bin/bash
-# PLEASE RUN THIS SCRIPT AS THE USER YOU ARE INSTALLING FOR ONLY (NO SUDO PLZ)
+# PLEASE RUN THIS SCRIPT ONLY AS THE USER YOU ARE INSTALLING FOR
 packages='vim rxvt-unicode tmux ttf-dejavu curl wget'
       printf  "===================================\n"
       echo -n "Welcome the dotfile install script"
